@@ -1,0 +1,19 @@
+extends ../layout
+
+block content
+    .reg-box
+        
+        .header
+            h2 OTP
+            script.
+              DisplayFunction()
+        form(action="/auth_reg", method="post")
+            .form-group
+                label(for="password") Ingrese el OTP generado
+                input(type="password" name="password" class="form-control" placeholder = "")
+               
+            
+            button(type="submit" class="btn btn-primary") Enviar OTP
+
+
+

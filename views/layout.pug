@@ -1,0 +1,37 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    <!-- Latest compiled and minified CSS -->
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css")
+
+    <!-- jQuery library -->
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
+
+    <!-- Latest compiled JavaScript -->
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js")
+    script.
+      // Function to generate OTP
+      function generateOTP() {
+                
+          // Declare a digits variable 
+          // which stores all digits
+          var digits = '0123456789';
+          let OTP = '';
+          for (let i = 0; i < 6; i++ ) {
+              OTP += digits[Math.floor(Math.random() * 10)];
+          }
+          return OTP;
+      }
+         function DisplayFunction() {
+            var result;
+            result = generateOTP();
+            document.write (result );
+            
+         }
+      //document.write("Su OTP de 6 Digitos es: ")
+      //document.write( generateOTP() );   
+  body
+    block content
+  

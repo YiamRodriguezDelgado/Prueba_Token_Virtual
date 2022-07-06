@@ -1,0 +1,11 @@
+extends ../layout
+
+block content
+    .login-box
+        .header
+            h2 Ingresar
+        form(action="/auth_login", method="post")
+            .form-group
+                label(for="password") Ingrese con su OTP validado por 60 segundos
+                input(type="password" name="password" class="form-control")
+            button(type="submit" class="btn btn-primary") Enviar
