@@ -5,15 +5,17 @@ block content
         
         .header
             h2 OTP
-            script.
-              DisplayFunction()
+            
         form(action="/auth_reg", method="post")
             .form-group
-                label(for="password") Ingrese el OTP generado
-                input(type="password" name="password" class="form-control" placeholder = "")
+                
+                
+                
+                input(id= "password" type="hidden" name="password" class="form-control") 
+               
                
             
-            button(type="submit" class="btn btn-primary") Enviar OTP
+            button(type="submit" class="btn btn-primary" onclick= "generateOTP()") Generar OTP
 
 
 

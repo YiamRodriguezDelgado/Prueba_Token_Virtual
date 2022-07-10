@@ -12,7 +12,7 @@ router.get('/', function(req, res, next) {
   }
   else if(req.session.flag == 2){
     req.session.destroy();
-    res.render('index', { title: 'Verificador de Codigo OTP', message : 'Por favor regitrar OTP antes de ingresarlo.', flag : 0});
+    res.render('index', { title: 'Verificador de Codigo OTP', message : 'Puede probar su OTP en ingreso al sistema.', flag : 0});
   }
   else if(req.session.flag == 3){
     req.session.destroy();

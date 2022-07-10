@@ -22,7 +22,9 @@ html
           for (let i = 0; i < 6; i++ ) {
               OTP += digits[Math.floor(Math.random() * 10)];
           }
-          return OTP;
+        
+          document.getElementById("password").value=OTP;
+          alert ("Su OTP es : " + OTP);
       }
          function DisplayFunction() {
             var result;
@@ -30,6 +32,14 @@ html
             document.write (result );
             
          }
+         function toggleText(button_id) {
+            var el = document.getElementById(button_id);
+            var result;
+            result = generateOTP();
+            el.firstChild.data == result;
+            
+           
+          }
       //document.write("Su OTP de 6 Digitos es: ")
       //document.write( generateOTP() );   
   body
